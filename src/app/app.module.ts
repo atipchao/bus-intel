@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import {RouterModule} from '@angular/router';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -8,6 +9,8 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { SectionSalesComponent } from './sections/section-sales/section-sales.component';
 import { SectionOrdersComponent } from './sections/section-orders/section-orders.component';
 import { SectionHealthComponent } from './sections/section-health/section-health.component';
+import { from } from 'rxjs';
+import { appRoutes } from 'src/route';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,7 @@ import { SectionHealthComponent } from './sections/section-health/section-health
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]
